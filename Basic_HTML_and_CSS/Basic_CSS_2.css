@@ -1,0 +1,11 @@
+p {
+	color: GhostWhite;
+	background-color: Maroon;
+	font-size: large;
+	text-align: center;
+}
+
+h3 {
+	text-shadow: 5px 5px 10px blue;
+}
+	
