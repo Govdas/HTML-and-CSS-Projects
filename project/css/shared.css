@@ -37,7 +37,7 @@ h1 {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-h1::after { /* This os the underline */
+h1::after { /* This is the underline */
     display: block;
     content: " ";
     height: 2px;
