@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
 		<title>Subnautica Game</title>
-		<link rel="stylesheet" href="./css/one_page_website.css"
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js" defer></script>
 	</head>
 	
 	<body>
@@ -35,51 +37,125 @@
 		<!-- END of HOME -->
 		
 		<!-- GALLERY -->
-		<section>
-			<div id="gallery">
-				<h2>Gallery</h2>
-				<div>
-					
-					<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<img src="./images/sub1.png">
-					</div>
-					<!-- END of PHOTO-CONTAINER 1 -->
-					
-					<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<img src="./images/sub2.png">
-					</div>
-					<!-- END of PHOTO-CONTAINER 2 -->
-					
-					<!-- PHOTO-CONTAINER 3 -->
-					<div>
-						<img src="./images/sub3.png">
-					</div>
-					<!-- END of PHOTO-CONTAINER 3 -->
-					
-					<!-- PHOTO-CONTAINER 4 -->
-					<div>
-						<img src="./images/sub4.png">
-					</div>
-					<!-- END of PHOTO-CONTAINER 4 -->
-					
-					<!-- PHOTO-CONTAINER 5 -->
-					<div>
-						<img src="./images/sub5.png">
-					</div>
-					<!-- END of PHOTO-CONTAINER 5 -->
-					
-					<!-- PHOTO-CONTAINER 6 -->
-					<div>
-						<img src="./images/sub6.png">
-					</div>
-					<!-- END of PHOTO-CONTAINER 6 -->
-					
+		
+		<div id="gallery">
+			<h2>Gallery</h2>
+			<div class="row">
+				
+				<!-- PHOTO-CONTAINER 1 -->
+				<div class="column">
+					<img src="./images/sub1.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 				</div>
+				<!-- END of PHOTO-CONTAINER 1 -->
+				
+				<!-- PHOTO-CONTAINER 2 -->
+				<div class="column">
+					<img src="./images/sub2.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+				</div>
+				<!-- END of PHOTO-CONTAINER 2 -->
+				
+				<!-- PHOTO-CONTAINER 3 -->
+				<div class="column">
+					<img src="./images/sub3.png" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+				</div>
+				<!-- END of PHOTO-CONTAINER 3 -->
+				
+				<!-- PHOTO-CONTAINER 4 -->
+				<div class="column">
+					<img src="./images/sub4.png" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+				</div>
+				<!-- END of PHOTO-CONTAINER 4 -->
+				
+				<!-- PHOTO-CONTAINER 5 -->
+				<div class="column">
+					<img src="./images/sub5.png" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+				</div>
+				<!-- END of PHOTO-CONTAINER 5 -->
+				
+				<!-- PHOTO-CONTAINER 6 -->
+				<div class="column">
+					<img src="./images/sub6.png" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+				</div>
+				<!-- END of PHOTO-CONTAINER 6 -->
+				
 			</div>
-		</section>
+		</div>
+		
 		<!-- END of GALLERY -->
+
+	<!-- The Modal/Lightbox -->
+	<div id="myModal" class="modal">
+
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="./images/sub1_wide.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="./images/sub2_wide.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="./images/sub3_wide.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="./images/sub4_wide.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="./images/sub5_wide.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="./images/sub6_wide.jpg" style="width:100%">
+			</div>
+
+			<!-- Next/Previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-- Caption text -->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!-- Thumbnail image controls -->
+			<div class="column">
+				<img class="thumbcont cursor" src="./images/sub1.png" style="width:100%" onclick="currentSlide(1)" alt="Submarine">
+			</div>
+
+			<div class="column">
+				<img class="thumbcont cursor" src="./images/sub2.png" style="width:100%" onclick="currentSlide(2)" alt="Leviathan">
+			</div>
+
+			<div class="column">
+				<img class="thumbcont cursor" src="./images/sub3.png" style="width:100%" onclick="currentSlide(3)" alt="Stalker">
+			</div>
+
+			<div class="column">
+				<img class="thumbcont cursor" src="./images/sub4.png" style="width:100%" onclick="currentSlide(4)" alt="Base">
+			</div>
+
+			<div class="column">
+				<img class="thumbcont cursor" src="./images/sub5.png" style="width:100%" onclick="currentSlide(5)" alt="Seamoth">
+			</div>
+
+			<div class="column">
+				<img class="thumbcont cursor" src="./images/sub6.png" style="width:100%" onclick="currentSlide(6)" alt="Crabsquid">
+			</div>
+
+		</div>
+	</div>	
 		
 		<!-- VIDEOS -->
 		<section>
@@ -89,19 +165,17 @@
 				
 					<!-- VIDEO-CONTAINER 1 -->
 					<div>
-						<iframe 
-							width="560" height="315" src="https://www.youtube.com/embed/Rz2SNm8VguE" 
-							title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-							clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Rz2SNm8VguE" 
+							title="Subnautica Cinematic Trailer" frameborder="0" allow="accelerometer; 
+							autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 						</iframe>
 					</div>
 					<!-- END of VIDEO-CONTAINER 1 -->
 					
 					<!-- VIDEO-CONTAINER 2 -->
 					<div>
-						<iframe 
-							width="560" height="315" src="https://www.youtube.com/embed/BtP8r8nRfko" 
-							title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/BtP8r8nRfko" 
+							title="Subnautica Gameplay Trailer" frameborder="0" allow="accelerometer; autoplay; 
 							clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 						</iframe>
 					</div>
